@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TheBun
+namespace TheBun.Models
 {
-    class Program
+    public abstract class BaseHero
     {
-        static void Main(string[] args)
-        {
-        }
+        public int id { get; set; }
+        public string name { get; set; }
     }
 }
