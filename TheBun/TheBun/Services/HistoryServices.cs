@@ -65,6 +65,11 @@ namespace TheBun.Services
             _numOfHero = rnd.Next(0, _enemyHeroManager.NumberHeros() - 1);
         }
 
+        public bool GetHeroPositiveCharacter() 
+        {
+            return _enemyHeroManager.GetHero(_numOfHero).positiveCharacter;
+        }
+
         public string GetHeroName()
         {
             return _enemyHeroManager.GetHero(_numOfHero).name;
