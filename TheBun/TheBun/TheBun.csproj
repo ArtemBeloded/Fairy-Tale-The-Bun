@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Containers\MyContainer.cs" />
+    <Compile Include="Models\BaseHero.cs" />
     <Compile Include="Models\Battle.cs" />
     <Compile Include="Models\Enemy\EnemyHero.cs" />
     <Compile Include="Models\Enemy\EnemyHeroCollection.cs" />

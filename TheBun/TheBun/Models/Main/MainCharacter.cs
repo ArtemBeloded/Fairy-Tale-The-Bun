@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheBun.Models
 {
-    public class MainCharacter
+    public class MainCharacter : BaseHero
     {
         public int id { get; set; }
         public string name { get; set; }
