@@ -19,7 +19,7 @@ namespace TheBun
 
                 for (int i = 0; i < _historyServices.countOfEnemyHeroes; i++)
                 {
-                    if (History()) 
+                    if (Meeting()) 
                     {
                         break;
                     }
@@ -44,7 +44,7 @@ namespace TheBun
             }
         }
 
-        private static bool History() 
+        private static bool Meeting() 
         {
             _historyServices.SelectEnemyHeroForBattle();
             Console.WriteLine("Как вдруг встречает он незнакомца. И тот говорнит: ");
