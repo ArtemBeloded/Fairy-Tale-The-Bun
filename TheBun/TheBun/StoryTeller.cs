@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheBun
 {
-    class Program
+    class StoryTeller
     {
         static void Main(string[] args)
         {
