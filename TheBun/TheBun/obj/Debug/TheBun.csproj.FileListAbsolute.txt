@@ -1,0 +1,6 @@
+C:\Users\Artem\Desktop\GitHub\Fairy-Tale-The-Bun\TheBun\TheBun\bin\Debug\TheBun.exe.config
+C:\Users\Artem\Desktop\GitHub\Fairy-Tale-The-Bun\TheBun\TheBun\bin\Debug\TheBun.exe
+C:\Users\Artem\Desktop\GitHub\Fairy-Tale-The-Bun\TheBun\TheBun\bin\Debug\TheBun.pdb
+C:\Users\Artem\Desktop\GitHub\Fairy-Tale-The-Bun\TheBun\TheBun\obj\Debug\TheBun.csprojAssemblyReference.cache
+C:\Users\Artem\Desktop\GitHub\Fairy-Tale-The-Bun\TheBun\TheBun\obj\Debug\TheBun.exe
+C:\Users\Artem\Desktop\GitHub\Fairy-Tale-The-Bun\TheBun\TheBun\obj\Debug\TheBun.pdb
