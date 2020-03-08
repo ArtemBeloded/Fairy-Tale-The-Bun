@@ -48,7 +48,7 @@ namespace TheBun.Services
             _mainHeroManager.AddHero(0);
         }
 
-        public bool CheckHp()
+        public bool IsLive()
         {
             if (_mainHeroManager.GetHero(0).hp <= 0)
             {
@@ -65,7 +65,7 @@ namespace TheBun.Services
             _numOfHero = rnd.Next(0, _enemyHeroManager.NumberHeros() - 1);
         }
 
-        public bool GetHeroPositiveCharacter() 
+        public bool IsHeroPositiveCharacter() 
         {
             return _enemyHeroManager.GetHero(_numOfHero).positiveCharacter;
         }
