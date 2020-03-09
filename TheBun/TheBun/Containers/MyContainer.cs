@@ -37,9 +37,19 @@ namespace TheBun.Containers
 
         public new void RemoveAt(int id)
         {
-            List<T> list = container.ToList();
-            list.RemoveAt(id);
-            container = list.ToArray();
+            var newArray = new T[container.Length - 1];
+            for (int i = 0; i < container.Length; i++)
+            {
+                if (i < id)
+                {
+                    newArray[i] = container[i];
+                }
+                else if (i > id)
+                {
+                    newArray[i - 1] = container[i];
+                }
+            }
+            container = newArray;
             Count--;
         }
     }
