@@ -1,29 +1,29 @@
 ﻿using System;
 using TheBun.Models;
-using TheBun.Models.Enemy;
 
 namespace TheBun.Services
 {
     public class EnemyHeroManager
     {
-        private EnemyHeroCollection _heroes;
+        private HeroesCollection<EnemyHero> _heroes;
+
         private Random rnd;
+
         public EnemyHeroManager()
         {
-            _heroes = new EnemyHeroCollection();
+            _heroes = new HeroesCollection<EnemyHero>();
             rnd = new Random();
         }
 
-
         public void AddHero(int numberOfHero)
         {
-            _heroes.enemyCollection.Add(new EnemyHero()
+            _heroes.Collection.Add(new EnemyHero()
             {
-                id = NumberHeros(),
-                name = Enum.GetName(typeof(Name), numberOfHero),
-                buff = SetBuff(),
-                damage = SetDamage(),
-                positiveCharacter = SetPositiveCharacter()
+                Id = NumberHeros(),
+                Name = Enum.GetName(typeof(Name), numberOfHero),
+                Buff = SetBuff(),
+                Damage = SetDamage(),
+                PositiveCharacter = SetPositiveCharacter()
             });
         }
 
@@ -44,20 +44,20 @@ namespace TheBun.Services
 
         public void DeleteHero(int id)
         {
-            _heroes.enemyCollection.RemoveAt(id);
+            _heroes.Collection.RemoveAt(id);
         }
         public void EditHero(EnemyHero enemyHero, int id)
         {
-            _heroes.enemyCollection[id] = enemyHero;
+            _heroes.Collection[id] = enemyHero;
         }
         public EnemyHero GetHero(int id)
         {
-            return _heroes.enemyCollection[id];
+            return _heroes.Collection[id];
         }
 
         public int NumberHeros()
         {
-            return _heroes.enemyCollection.Count;
+            return _heroes.Collection.Count;
         }
 
     }

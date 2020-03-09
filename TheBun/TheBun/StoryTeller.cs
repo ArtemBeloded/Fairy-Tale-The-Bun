@@ -17,7 +17,7 @@ namespace TheBun
                 Console.WriteLine("Катится он...катится как вдруг..");
                 _historyServices = new HistoryServices();
 
-                for (int i = 0; i < _historyServices.countOfEnemyHeroes; i++)
+                for (int i = 0; i < _historyServices.CountEnemyHeroes; i++)
                 {
                     if (Meeting()) 
                     {

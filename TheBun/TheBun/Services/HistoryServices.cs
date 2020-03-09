@@ -5,14 +5,20 @@ namespace TheBun.Services
 {
     public class HistoryServices
     {
-        public int countOfEnemyHeroes { get; private set; }
+        public int CountEnemyHeroes { get; private set; }
+
         private int _numOfHero;
+
         private EnemyHeroManager _enemyHeroManager;
+
         private MainHeroManager _mainHeroManager;
+
         private Battle _battle;
 
         private delegate void Assistant();
+
         private event Assistant Preparation;
+
         private Random rnd;
 
         public HistoryServices()
@@ -27,7 +33,7 @@ namespace TheBun.Services
 
         public void CreateEnemyHeroes()
         {
-            for (int i = 0; i < countOfEnemyHeroes; i++)
+            for (int i = 0; i < CountEnemyHeroes; i++)
             {
                 _enemyHeroManager.AddHero(NameOfEnemyHero());
             }
@@ -39,7 +45,7 @@ namespace TheBun.Services
         }
         private void CountOfEnemyHeroes()
         {
-            countOfEnemyHeroes = rnd.Next(3, 16);
+            CountEnemyHeroes = rnd.Next(3, 16);
             Preparation();
         }
 
@@ -50,7 +56,7 @@ namespace TheBun.Services
 
         public bool IsLive()
         {
-            if (_mainHeroManager.GetHero(0).hp <= 0)
+            if (_mainHeroManager.GetHero(0).Hp <= 0)
             {
                 return true;
             }
@@ -67,26 +73,26 @@ namespace TheBun.Services
 
         public bool IsHeroPositiveCharacter() 
         {
-            return _enemyHeroManager.GetHero(_numOfHero).positiveCharacter;
+            return _enemyHeroManager.GetHero(_numOfHero).PositiveCharacter;
         }
 
         public string GetHeroName()
         {
-            return _enemyHeroManager.GetHero(_numOfHero).name;
+            return _enemyHeroManager.GetHero(_numOfHero).Name;
         }
 
         public void CreateBatle()
         {
             _battle = new Battle();
-            _battle.opponents.Add(_enemyHeroManager.GetHero(_numOfHero));
+            _battle.Opponents.Add(_enemyHeroManager.GetHero(_numOfHero));
             var mainHero = _mainHeroManager.GetHero(0);
-            if (_battle.opponents[0].positiveCharacter)
+            if (_battle.Opponents[0].PositiveCharacter)
             {
-                mainHero.hp += BattleServices.Buff(_battle);
+                mainHero.Hp += BattleServices.Buff(_battle);
             }
             else
             {
-                mainHero.hp -= BattleServices.Hit(_battle);
+                mainHero.Hp -= BattleServices.Hit(_battle);
             }
             _mainHeroManager.EditHero(mainHero, 0);
         }
