@@ -3,10 +3,14 @@ namespace TheBun.Models
 {
     public class EnemyHero : BaseHero
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public int buff { get; set; }
-        public int damage { get; set; }
-        public bool positiveCharacter { get; set; }
+        public int Id { get; set; }
+
+        public string Name { get; set; }
+
+        public int Buff { get; set; }
+
+        public int Damage { get; set; }
+
+        public bool PositiveCharacter { get; set; }
     }
 }

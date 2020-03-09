@@ -6,12 +6,12 @@ namespace TheBun.Services
     {
         public static int Hit(Battle battle)
         {
-            return battle.opponents[0].damage;
+            return battle.Opponents[0].Damage;
         }
 
         public static int Buff(Battle battle)
         {
-            return battle.opponents[0].buff;
+            return battle.Opponents[0].Buff;
         }
     }
 }

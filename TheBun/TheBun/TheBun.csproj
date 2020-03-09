@@ -47,9 +47,8 @@
     <Compile Include="Models\BaseHero.cs" />
     <Compile Include="Models\Battle.cs" />
     <Compile Include="Models\Enemy\EnemyHero.cs" />
-    <Compile Include="Models\Enemy\EnemyHeroCollection.cs" />
+    <Compile Include="Models\HeroesCollection.cs" />
     <Compile Include="Models\Main\MainCharacter.cs" />
-    <Compile Include="Models\Main\MainHeroCollection.cs" />
     <Compile Include="Models\Name.cs" />
     <Compile Include="Services\BattleServices.cs" />
     <Compile Include="Services\EnemyHero\EnemyHeroManager.cs" />

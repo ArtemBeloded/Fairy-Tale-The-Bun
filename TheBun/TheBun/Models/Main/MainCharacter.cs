@@ -3,8 +3,10 @@ namespace TheBun.Models
 {
     public class MainCharacter : BaseHero
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public int hp { get; set; }
+        public int Id { get; set; }
+
+        public string Name { get; set; }
+
+        public int Hp { get; set; }
     }
 }
