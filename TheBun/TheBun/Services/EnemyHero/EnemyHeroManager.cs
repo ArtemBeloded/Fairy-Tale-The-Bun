@@ -14,7 +14,6 @@ namespace TheBun.Services
             rnd = new Random();
         }
 
-
         public void AddHero(int numberOfHero)
         {
             _heroes.enemyCollection.Add(new EnemyHero()
